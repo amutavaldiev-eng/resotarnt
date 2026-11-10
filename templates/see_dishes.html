@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="dishes-page">
+    <h1>Our Dishes</h1>
+    <p class="form-text">All dishes in our restaurant</p>
+    <div class="dishes-container">
+        {% for dish in dishes %}
+        <div class="dish-card">
+            <h2>{{dish.name}}</h2>
+            <p>{{dish.caption}}</p>
+            <h3>{{dish.price}} Somoni</h3>
+            <div class="dish-buttons">
+                <a href="http://192.168.0.74:2000/update_dish/{{dish.id}}/" class="update-btn">Update</a>
+                <a href="http://192.168.0.74:2000/delete_dish/{{dish.id}}/" class="delete-btn">Delete</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <a href="http://192.168.0.74:2000/" class="back-btn">Back</a>
+
+</div>
+
+{% endblock %}

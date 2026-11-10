@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="orders-page">
+
+    <h1>Restaurant Orders</h1>
+    <p class="form-text">Manage all restaurant orders</p>
+    <div class="orders-container">
+
+        {% for order in orders %}
+        <div class="order-card">
+            <h2>Order {{ order.id }}</h2>
+            <p><strong>Customer:</strong> {{order.username}}</p>
+            <p><strong>Table:</strong> {{order.table.table_num}}</p>
+            <p><strong>Dishes:</strong></p>
+
+            {% for dish in order.dishes.all %}
+                <span class="order-dish">{{dish.name}}</span>
+            {% endfor %}
+
+            <div class="order-buttons">
+                <a href="http://192.168.0.74:2000/update_order/{{order.id}}/" class="update-btn">Update</a>
+                <a href="http://192.168.0.74:2000/delete_order/{{order.id}}/" class="delete-btn">Delete</a>
+            </div>
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+    <a href="http://192.168.0.74:2000/" class="back-btn">Back</a>
+
+</div>
+
+{% endblock %}

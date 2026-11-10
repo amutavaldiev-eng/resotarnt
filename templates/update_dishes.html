@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="form-box dish-box">
+    <h1>✏️ Update Dish</h1>
+    <p class="form-text">Edit your dish information</p>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="name" value="{{ dish.name }}" placeholder="Dish name" required>
+        <textarea name="caption" placeholder="Description" required>{{ dish.caption }}</textarea>
+        <input type="number" name="price" value="{{dish.price}}" placeholder="Price" required>
+          <select name="category" required>
+            <option value="">Select Category</option>
+            {% for category in categories %}
+                <option value="{{category.id}}">{{category.name}}</option>
+            {% endfor %}
+        </select>
+
+        <button type="submit">Update Dish</button>
+        <a href="http://192.168.0.74:2000/dishes/" class="back-btn">Back</a>
+    </form>
+</div>
+
+{% endblock %}

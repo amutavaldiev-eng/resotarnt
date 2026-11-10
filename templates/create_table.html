@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="form-box table-box">
+    <h1>🪑 Create New Table</h1>
+    <p class="form-text">Add a new table to your restaurant</p>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="number" name="table_num" placeholder="Enter table number"  required>
+        <button type="submit">+ Create Table</button>
+        <a href="http://192.168.0.74:2000/" class="back-btn">Back</a>
+    </form>
+</div>
+{% endblock %}

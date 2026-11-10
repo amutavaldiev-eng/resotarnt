@@ -1,0 +1,451 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background-image: url("360_F_297677001_zX7ZzRq8DObUV5IWTHAIhAae6DuiEQh4.jpg");
+    background-size: 100% 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: rgba(24, 20, 20, 0.85);
+    padding: 25px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+header h2 span {
+    color: #ff8500;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff8500;
+}
+
+.content {
+    padding: 50px 5%;
+    min-height: 85vh;
+}
+
+.cards {
+    display: flex;
+    gap: 25px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: rgba(30, 30, 30, 0.8);
+    backdrop-filter: blur(12px);
+    padding: 30px;
+    border-radius: 15px;
+    width: 250px;
+    border: 1px solid rgba(255,255,255,0.12);
+    transition: 0.3s;
+}
+.card:hover {
+    transform: translatey(20px);
+    border-color: #ff8500;
+    background: rgba(40, 40, 40, 0.5);
+}
+.card h2 {
+    color: #ff8500;
+    margin-bottom: 20px;
+}
+.card a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-top: 15px;
+}
+.card a:hover {
+    color: #ff8500;
+    
+}
+
+
+.form-box {
+    width: 400px;
+    padding: 40px;
+    margin: 100px auto;
+    background: rgba(20, 20, 20, 0.85);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(0,0,0,0.5);
+}
+
+.form-box h1 {
+    color: #ff8500;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+.form-box input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    background: #252525;
+    border: 1px solid #555;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+.form-box input:focus {
+    border-color: #ff8500;
+}
+.form-box button {
+    width: 100%;
+    padding: 14px;
+    background: #ff8500;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.form-box button:hover {
+    background: #e66f00;
+}
+
+.back-btn {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin-top: 12px;
+    background: #6f6f6f;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: #be5252;
+    transform: translatey(-2px);
+}
+
+
+.dish-box {
+    width: 450px;
+    margin: 50px auto;
+    padding: 35px;
+}
+
+.dish-box h1 {
+    font-size: 30px;
+    color: #ff8500;
+    margin-bottom: 10px;
+}
+
+.form-text {
+    color: #ccc;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.dish-box input,
+.dish-box select,
+.dish-box textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 18px;
+    background: #252525;
+    color: white;
+    border: 1px solid #555;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+.dish-box textarea {
+    height: 110px;
+    resize: vertical;
+}
+
+
+
+.dish-box button {
+    width: 100%;
+    padding: 14px;
+    background: #ff8500;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dish-box button:hover {
+    background: #e66f00;
+    transform: translatey(-2px);
+}.dishes-page {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.dishes-page h1 {
+    font-size: 40px;
+    color: #ff8500;
+    margin-bottom: 10px;
+}
+
+.dishes-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 40px 0;
+}
+
+.dish-card {
+    width: 280px;
+    padding: 25px;
+    background: rgba(20, 20, 20, 0.88);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 15px;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.dish-card:hover {
+    transform: translatey(-6px);
+    border-color: #ff8500;
+}
+
+.dish-card h2 {
+    color: #ff8500;
+    margin-bottom: 15px;
+}
+
+.dish-card p {
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.dish-card h3 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.dish-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.dish-buttons a {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 7px;
+}
+
+.update-btn {
+    background: #2878d0;
+}
+
+.delete-btn {
+    background: #d93636;
+}
+
+.update-btn:hover {
+    background: #185ba5;
+    transform: translatey(-2px);
+}
+
+.delete-btn:hover {
+    background: #a82020;
+    transform: translatey(-2px);
+}
+
+.table-box {
+    width: 400px;
+    margin: 100px auto;
+    padding: 40px;
+}
+
+.table-box h1 {
+    color: #ff8500;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.table-box input {
+    width: 100%;
+    padding: 14px;
+    margin: 20px 0;
+    background: #252525;
+    color: white;
+    border: 1px solid #555;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+.table-box input:focus {
+    border-color: #ff8500;
+}
+
+.table-box button {
+    width: 100%;
+    padding: 14px;
+    background: #ff8500;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.table-box button:hover {
+    background: #e66f00;
+}
+
+
+.order-box {
+    width: 450px;
+    margin: 60px auto;
+    padding: 40px;
+}
+
+.order-box h1 {
+    color: #ff8500;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.order-box input,
+.order-box select {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 18px;
+    background: #252525;
+    color: white;
+    border: 1px solid #555;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+.order-box input:focus,
+.order-box select:focus {
+    border-color: #ff8500;
+}
+
+.order-box button {
+    width: 100%;
+    padding: 14px;
+    background: #ff8500;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.order-box button:hover {
+    background: #e66f00;
+}
+.orders-page {
+    text-align: center;
+    padding: 30px 0;
+}
+.orders-page h1 {
+    color: #ff8500;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.orders-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 40px 0;
+}
+.order-card {
+    width: 300px;
+    padding: 25px;
+    background: rgba(20, 20, 20, 0.88);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 15px;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.order-card:hover {
+    transform: translatey(-7px);
+    border-color: #ff8500;
+}
+
+.order-card h2 {
+    color: #ff8500;
+    margin-bottom: 20px;
+}
+
+.order-card p {
+    color: #ddd;
+    margin-bottom: 12px;
+}
+
+.order-dish {
+    display: inline-block;
+    background: #333;
+    padding: 7px 12px;
+    border-radius: 6px;
+    margin: 5px 3px;
+    color: white;
+}
+
+.order-date {
+    color: #ff8500 !important;
+    margin-top: 20px;
+}
+
+.order-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.order-buttons a {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 7px;
+}

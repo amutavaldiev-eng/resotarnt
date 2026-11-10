@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Waiter Panel</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+    <header>
+        <h2>Online <span>Restaurant</span></h2>
+
+        <nav>
+            <a href="http://192.168.0.74:2000/">Home</a>
+            <a href="http://192.168.0.74:2000/category">Categories</a>
+            <a href="http://192.168.0.74:2000/dishes">Dishes</a>
+            <a href="http://192.168.0.74:2000/table">Tables</a>
+            <a href="http://192.168.0.74:2000/orders">Orders</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+</body>
+</html>

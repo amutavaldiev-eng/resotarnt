@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="form-box dish-box">
+    <h1>🍽 Add New Dish</h1>
+    <p class="form-text">Add a new dish to your restaurant menu</p>
+    <form method="POST">
+        {% csrf_token %}
+        <select name="category" required>
+            <option value="">Select Category</option>
+            {% for category in categories %}
+                <option value="{{category.id}}">{{category.name}}</option>
+            {% endfor %}
+        </select>
+        <input type="text" name="name" placeholder="Dish Name" required>
+        <textarea name="caption" placeholder="Dish Description" required></textarea>
+        <input type="number" name="price" placeholder="Price (Somoni)" required>
+        <button type="submit">+ Add Dish</button>
+        <a href="http://192.168.0.74:2000/" class="back-btn">Back</a>
+    </form>
+</div>
+{% endblock %}
